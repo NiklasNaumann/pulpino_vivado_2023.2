@@ -50,7 +50,7 @@ def find_server():
 
             return [server, group, remote]
 
-    print tcolors.ERROR + "ERROR: could not find remote server." + tcolors.ENDC
+    # print tcolors.ERROR + "ERROR: could not find remote server." + tcolors.ENDC
     sys.exit(1)
 
 if len(sys.argv) > 1:
