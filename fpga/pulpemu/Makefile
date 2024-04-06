@@ -35,6 +35,8 @@ clean:
 	rm -rf ${PROJECT}.cache
 	rm -rf ${PROJECT}.ioplanning
 	rm -rf ${PROJECT}.hwdef
+	rm -rf ${PROJECT}.gen
+	rm -rf ${PROJECT}.ip_user_files
 	rm -rf *.log
 	rm -rf ulpsoc.txt
 	rm -rf ulpcluster.txt

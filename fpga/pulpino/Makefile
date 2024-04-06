@@ -17,6 +17,8 @@ clean:
 	rm -rf ${PROJECT}.cache
 	rm -rf ${PROJECT}.ioplanning
 	rm -rf ${PROJECT}.hw
+	rm -rf ${PROJECT}.gen
+	rm -rf ${PROJECT}.ip_user_files
 	rm -rf component.xml
 	rm -rf vivado*
 	rm -rf .Xil
