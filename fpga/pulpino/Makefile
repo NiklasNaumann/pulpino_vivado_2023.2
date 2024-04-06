@@ -26,3 +26,4 @@ clean:
 	rm -rf ${PROJECT}.edn
 	rm -rf ${PROJECT}_stub.v
 	rm -rf ${PROJECT}_funcsim.v
+	rm -rf reports_*
