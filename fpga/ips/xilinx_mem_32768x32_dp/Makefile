@@ -2,10 +2,11 @@ PROJECT:=xilinx_mem_32768x32_dp
 
 all:
 	vivado -mode batch -source tcl/run.tcl
-	cp xilinx_mem_32768x32_dp.srcs/sources_1/ip/xilinx_mem_32768x32_dp/xilinx_mem_32768x32_dp_stub.v ./ip
-	cp xilinx_mem_32768x32_dp.srcs/sources_1/ip/xilinx_mem_32768x32_dp/xilinx_mem_32768x32_dp.xci ./ip
-	cp xilinx_mem_32768x32_dp.srcs/sources_1/ip/xilinx_mem_32768x32_dp/xilinx_mem_32768x32_dp.veo ./ip
-	cp xilinx_mem_32768x32_dp.srcs/sources_1/ip/xilinx_mem_32768x32_dp/xilinx_mem_32768x32_dp.dcp ./ip
+	mkdir -p ip
+	cp ${PROJECT}.gen/sources_1/ip/${PROJECT}/${PROJECT}_stub.v ./ip
+	cp ${PROJECT}.gen/sources_1/ip/${PROJECT}/${PROJECT}.xci ./ip
+	cp ${PROJECT}.gen/sources_1/ip/${PROJECT}/${PROJECT}.veo ./ip
+	cp ${PROJECT}.gen/sources_1/ip/${PROJECT}/${PROJECT}.dcp ./ip
 
 gui:
 	vivado -mode gui -source tcl/run.tcl &
@@ -19,6 +20,8 @@ clean:
 	rm -rf ${PROJECT}.runs
 	rm -rf ${PROJECT}.srcs
 	rm -rf ${PROJECT}.cache
+	rm -rf ${PROJECT}.gen
+	rm -rf ${PROJECT}.ip_user_files
 	rm -rf component.xml
 	rm -rf vivado*.jou
 	rm -rf vivado*.log
