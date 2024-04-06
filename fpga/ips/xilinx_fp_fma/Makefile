@@ -5,7 +5,7 @@ all:
 	mkdir -p ip
 	cp ${PROJECT}.gen/sources_1/ip/${PROJECT}/${PROJECT}_stub.v ./ip
 	cp ${PROJECT}.gen/sources_1/ip/${PROJECT}/${PROJECT}_stub.vhdl ./ip
-	cp ${PROJECT}.gen/sources_1/ip/${PROJECT}/${PROJECT}.xci ./ip
+	cp ${PROJECT}.srcs/sources_1/ip/${PROJECT}/${PROJECT}.xci ./ip
 	cp ${PROJECT}.gen/sources_1/ip/${PROJECT}/${PROJECT}.veo ./ip
 	cp ${PROJECT}.gen/sources_1/ip/${PROJECT}/${PROJECT}.dcp ./ip
 
